@@ -48,7 +48,7 @@ function UnitConverter() {
   };
 
   return (
-    <div className="p-3 px-5">
+    <div className="p-3 px-5 border-solid border-2 rounded">
       <h2 className="py-3 text-3xl text-blue-900">Convert Amount</h2>
       <label className="">
         Value:

@@ -1,23 +1,17 @@
 import React, { useState } from 'react';
 import { uid } from 'uid';
 import InvoiceItem from './InvoiceItem';
-// import InvoiceModal from './InvoiceModal';
-import incrementString from '../components/helpers/incrementString';
 const date = new Date();
 const today = date.toLocaleDateString('en-US', {
   day: 'numeric',
   month: 'numeric',
   year: 'numeric',
 });
-// probably need to change date format
 
 const InvoiceForm = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  // const [discount, setDiscount] = useState('');
+  // const [isOpen, setIsOpen] = useState(false);
   const [tax, setTax] = useState('');
-  const [invoiceNumber, setInvoiceNumber] = useState(1);
-  const [cashierName, setCashierName] = useState('');
-  const [customerName, setCustomerName] = useState('');
+  const [storeName, setStoreName] = useState('');
   const [items, setItems] = useState([
     {
       id: uid(6),
@@ -33,21 +27,21 @@ const InvoiceForm = () => {
     setIsOpen(true);
   };
 
-  const addNextInvoiceHandler = () => {
-    // this increments the invoice
-    setInvoiceNumber((prevNumber) => incrementString(prevNumber));
-    // this sets the items 
-    setItems([
-      {
-        id: uid(6),
-        name: '',
-        qty: 1,
-        price: '1.00',
-      },
-    ]);
-  };
+  // const addNextInvoiceHandler = () => {
+  //   // this increments the invoice
+  //   setInvoiceNumber((prevNumber) => incrementString(prevNumber));
+  //   // this sets the items 
+  //   setItems([
+  //     {
+  //       id: uid(6),
+  //       name: '',
+  //       qty: 1,
+  //       price: '1.00',
+  //     },
+  //   ]);
+  // };
 
-  // So nothing works without the uid
+
   const addItemHandler = () => {
     const id = uid(6);
     setItems((prevItem) => [
@@ -92,9 +86,6 @@ const InvoiceForm = () => {
 
   const taxRate = (tax * subtotal) / 100;
   
-  // const discountRate = (discount * subtotal) / 100;
-  
-  // const total = subtotal - discountRate + taxRate;
   const total = subtotal + taxRate;
 
   return (
@@ -104,65 +95,33 @@ const InvoiceForm = () => {
     >
       <div className="my-6 flex-1 space-y-2  rounded-md bg-white p-4 shadow-sm sm:space-y-4 md:p-6">
         <div className="flex flex-col justify-between space-y-2 border-b border-gray-900/10 pb-4 md:flex-row md:items-center md:space-y-0">
+{/* Date */}
           <div className="flex space-x-2">
             <span className="font-bold">Current Date: </span>
             <span>{today}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <label className="font-bold" htmlFor="invoiceNumber">
-              Invoice Number:
-            </label>
-            <input
-              required
-              className="max-w-[130px]"
-              type="number"
-              name="invoiceNumber"
-              id="invoiceNumber"
-              min="1"
-              step="1"
-              value={invoiceNumber}
-              onChange={(event) => setInvoiceNumber(event.target.value)}
-            />
-          </div>
+          </div>        
         </div>
-        <h1 className="text-center text-lg font-bold">INVOICE</h1>
-        {/* Invoice */}
-        <div className="grid grid-cols-2 gap-2 pt-4 pb-8">
+{/* Store */}
+        <div className="text-lg">
           <label
-            htmlFor="cashierName"
+            htmlFor="storeName"
             className="text-sm font-bold sm:text-base"
           >
-            Cashier:
+            Store Name:
           </label>
           <input
             required
-            className="flex-1"
-            placeholder="Cashier name"
+            className="mx-3 px-3 py-1 rounded"
+            placeholder="Store name"
             type="text"
-            name="cashierName"
-            id="cashierName"
-            value={cashierName}
-            onChange={(event) => setCashierName(event.target.value)}
-          />
-          <label
-            htmlFor="customerName"
-            className="col-start-2 row-start-1 text-sm font-bold md:text-base"
-          >
-            Customer:
-          </label>
-          <input
-            required
-            className="flex-1"
-            placeholder="Customer name"
-            type="text"
-            name="customerName"
-            id="customerName"
-            value={customerName}
-            onChange={(event) => setCustomerName(event.target.value)}
+            name="storeName"
+            id="storeName"
+            value={storeName}
+            onChange={(event) => setStoreName(event.target.value)}
           />
         </div>
-        {/* Cashier and Customer Maybe change one to Store */}
-        <table className="w-full p-4 text-left">
+
+        <table className="w-8/12 p-4 text-left">
           <thead>
             <tr className="border-b border-gray-900/10 text-sm md:text-base">
               <th>ITEM</th>
@@ -195,8 +154,8 @@ const InvoiceForm = () => {
         </button>
 
 {/* Tax Input */}
-        <div className="space-y-4 py-2">
-            <div className="space-y-2">
+        <div className="py-2">
+            <div className="py-2">
               <label className="text-sm font-bold md:text-base" htmlFor="tax">
                 Tax rate:
               </label>
@@ -220,25 +179,19 @@ const InvoiceForm = () => {
 
 {/* subtotal */}
         <div className="flex flex-col items-end space-y-2 pt-6">
-          <div className="flex w-full justify-between md:w-1/2">
+          <div className="flex w-3/12 justify-between md:w-1/2">
             <span className="font-bold">Subtotal:</span>
             <span>${subtotal.toFixed(2)}</span>
           </div>
 {/* Tax */}
-          {/* <div className="flex w-full justify-between md:w-1/2">
-            <span className="font-bold">Discount:</span>
-            <span>
-              ({discount || '0'}%)${discountRate.toFixed(2)}
-            </span>
-          </div> */}
-          <div className="flex w-full justify-between md:w-1/2">
+          <div className="flex w-3/12 justify-between md:w-1/2">
             <span className="font-bold">Tax:</span>
             <span>
               ({tax || '0'}%)${taxRate.toFixed(2)}
             </span>
           </div>
 {/* Total */}
-          <div className="flex w-full justify-between border-t border-gray-900/10 pt-2 md:w-1/2">
+          <div className="flex w-3/12 justify-between border-t border-gray-900/10 pt-2 md:w-1/2">
             <span className="font-bold">Total:</span>
             <span className="font-bold">
               ${total % 1 === 0 ? total : total.toFixed(2)}
@@ -246,79 +199,6 @@ const InvoiceForm = () => {
           </div>
         </div>
       </div>
-
-      {/* The invoice modal */}
-      {/* <div className="basis-1/4 bg-transparent">
-        <div className="sticky top-0 z-10 space-y-4 divide-y divide-gray-900/10 pb-8 md:pt-6 md:pl-4">
-          <button
-            className="w-full rounded-md bg-blue-500 py-2 text-sm text-white shadow-sm hover:bg-blue-600"
-            type="submit"
-          >
-            Review Invoice
-          </button>
-          <InvoiceModal
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            invoiceInfo={{
-              invoiceNumber,
-              cashierName,
-              customerName,
-              subtotal,
-              taxRate,
-              discountRate,
-              total,
-            }}
-            items={items}
-            onAddNextInvoice={addNextInvoiceHandler}
-          /> */}
-          {/* <div className="space-y-4 py-2">
-            <div className="space-y-2">
-              <label className="text-sm font-bold md:text-base" htmlFor="tax">
-                Tax rate:
-              </label>
-              <div className="flex items-center">
-                <input
-                  className="w-full rounded-r-none bg-white shadow-sm"
-                  type="number"
-                  name="tax"
-                  id="tax"
-                  min="0.01"
-                  step="0.01"
-                  placeholder="0.0"
-                  value={tax}
-                  onChange={(event) => setTax(event.target.value)}
-                />
-                <span className="rounded-r-md bg-gray-200 py-2 px-4 text-gray-500 shadow-sm">
-                  %
-                </span>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <label
-                className="text-sm font-bold md:text-base"
-                htmlFor="discount"
-              >
-                Discount rate:
-              </label>
-              <div className="flex items-center">
-                <input
-                  className="w-full rounded-r-none bg-white shadow-sm"
-                  type="number"
-                  name="discount"
-                  id="discount"
-                  min="0"
-                  step="0.01"
-                  placeholder="0.0"
-                  value={discount}
-                  onChange={(event) => setDiscount(event.target.value)}
-                />
-                <span className="rounded-r-md bg-gray-200 py-2 px-4 text-gray-500 shadow-sm">
-                  %
-                </span>
-              </div>
-            </div>
-          </div> */}
-        {/* </div> */}
       </div> 
     </form>
   );
