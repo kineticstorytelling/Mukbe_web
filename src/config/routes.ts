@@ -1,5 +1,5 @@
 import Home from "../pages/Home";
-import Dashboard from "../pages/Dashboard";
+// import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
 import Items from "../pages/Items";
 import Stores from "../pages/Stores";
@@ -16,12 +16,6 @@ const routes: RouteType[] = [
         path: "",
         component: Home,
         name: "Home Screen",
-        protected: false
-    },
-     { 
-        path: "/dashboard",
-        component: Dashboard,
-        name: "Dashboard",
         protected: false
     },
     { 
