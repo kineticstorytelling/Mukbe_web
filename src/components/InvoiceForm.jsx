@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { uid } from 'uid';
 import InvoiceItem from './InvoiceItem';
-import InvoiceModal from './InvoiceModal';
+// import InvoiceModal from './InvoiceModal';
 import incrementString from '../components/helpers/incrementString';
 const date = new Date();
-const today = date.toLocaleDateString('en-GB', {
-  month: 'numeric',
+const today = date.toLocaleDateString('en-US', {
   day: 'numeric',
+  month: 'numeric',
   year: 'numeric',
 });
 // probably need to change date format
 
 const InvoiceForm = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [discount, setDiscount] = useState('');
+  // const [discount, setDiscount] = useState('');
   const [tax, setTax] = useState('');
   const [invoiceNumber, setInvoiceNumber] = useState(1);
   const [cashierName, setCashierName] = useState('');
@@ -92,9 +92,10 @@ const InvoiceForm = () => {
 
   const taxRate = (tax * subtotal) / 100;
   
-  const discountRate = (discount * subtotal) / 100;
+  // const discountRate = (discount * subtotal) / 100;
   
-  const total = subtotal - discountRate + taxRate;
+  // const total = subtotal - discountRate + taxRate;
+  const total = subtotal + taxRate;
 
   return (
     <form
@@ -186,29 +187,57 @@ const InvoiceForm = () => {
           </tbody>
         </table>
         <button
-          className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white shadow-sm hover:bg-blue-600"
+          className="rounded-md bg-blue-800 px-4 py-2 text-sm text-white shadow-sm hover:bg-blue-300"
           type="button"
           onClick={addItemHandler}
         >
           Add Item
         </button>
+
+{/* Tax Input */}
+        <div className="space-y-4 py-2">
+            <div className="space-y-2">
+              <label className="text-sm font-bold md:text-base" htmlFor="tax">
+                Tax rate:
+              </label>
+              <div className="p-3">
+                <input
+                  className="w-1/4 rounded mx-3 bg-white shadow-sm"
+                  type="number"
+                  name="tax"
+                  id="tax"
+                  min="0.01"
+                  step="0.01"
+                  placeholder="0.0"
+                  value={tax}
+                  onChange={(event) => setTax(event.target.value)}
+                />
+                <span className="rounded-r-md bg-gray-200 py-2 px-4 text-gray-500 shadow-sm">
+                  %
+                </span>
+              </div>
+            </div>
+
+{/* subtotal */}
         <div className="flex flex-col items-end space-y-2 pt-6">
           <div className="flex w-full justify-between md:w-1/2">
             <span className="font-bold">Subtotal:</span>
             <span>${subtotal.toFixed(2)}</span>
           </div>
-          <div className="flex w-full justify-between md:w-1/2">
+{/* Tax */}
+          {/* <div className="flex w-full justify-between md:w-1/2">
             <span className="font-bold">Discount:</span>
             <span>
               ({discount || '0'}%)${discountRate.toFixed(2)}
             </span>
-          </div>
+          </div> */}
           <div className="flex w-full justify-between md:w-1/2">
             <span className="font-bold">Tax:</span>
             <span>
               ({tax || '0'}%)${taxRate.toFixed(2)}
             </span>
           </div>
+{/* Total */}
           <div className="flex w-full justify-between border-t border-gray-900/10 pt-2 md:w-1/2">
             <span className="font-bold">Total:</span>
             <span className="font-bold">
@@ -241,8 +270,8 @@ const InvoiceForm = () => {
             }}
             items={items}
             onAddNextInvoice={addNextInvoiceHandler}
-          />
-          <div className="space-y-4 py-2">
+          /> */}
+          {/* <div className="space-y-4 py-2">
             <div className="space-y-2">
               <label className="text-sm font-bold md:text-base" htmlFor="tax">
                 Tax rate:
@@ -288,9 +317,9 @@ const InvoiceForm = () => {
                 </span>
               </div>
             </div>
-          </div>
-        </div>
-      </div> */}
+          </div> */}
+        {/* </div> */}
+      </div> 
     </form>
   );
 };

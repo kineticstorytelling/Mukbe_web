@@ -30,7 +30,7 @@ const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
           }}
         />
       </td>
-      <td className="min-w-[65px] md:min-w-[80px]">
+      <td className="min-w-[65px] md:min-w-[80px] ">
         <InvoiceField
           onEditItem={(event) => onEdtiItem(event)}
           cellData={{
@@ -42,10 +42,10 @@ const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
           }}
         />
       </td>
-      <td className="relative min-w-[100px] md:min-w-[150px]">
+      <td className="py-3 relative min-w-[100px] md:min-w-[150px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute left-2 top-1/2 h-6 w-6 -translate-y-1/2 text-gray-400 sm:left-4"
+          className="absolute left-2 top-1/2 h-6 w-6 -translate-y-1/2 text-green-700 sm:left-4"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -72,7 +72,7 @@ const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
       </td>
       <td className="flex items-center justify-center">
         <button
-          className="rounded-md bg-red-500 p-2 text-white shadow-sm transition-colors duration-200 hover:bg-red-600"
+          className="rounded-md bg-red-800 p-2 my-3 text-white shadow-sm transition-colors duration-200 hover:bg-red-600"
           onClick={deleteItemHandler}
         >
           <svg
