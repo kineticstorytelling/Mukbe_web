@@ -75,11 +75,11 @@ function UnitConverter() {
         </select>
       </label>
       <br />
-      <button onClick={handleConvert}>Convert</button>
+      <button className='bg-blue-300 px-3 py-1 rounded my-4 text-yellow-100 border-solid border-2 hover:bg-blue-100 hover:text-blue-800 hover:border-blue-400' onClick={handleConvert}>Convert</button>
       <br />
-      <label>
+      <label className="">
         Result:
-        <input type="number" value={outputValue} readOnly />
+        <input className='mx-3 py-1 px-1 w-1/4 rounded' type="number" value={outputValue} readOnly />
       </label>
     </div>
   );
