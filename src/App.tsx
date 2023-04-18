@@ -1,6 +1,5 @@
 import {BrowserRouter, HashRouter, Router, Routes, Route, Link} from 'react-router-dom'
-import React, { useState, useEffect } from 'react'
-// import './App.css'
+import AuthChecker from './auth/AuthChecker'
 import {Provider} from 'react-redux'
 import {store} from './redux/store'
 import routes from './config/routes';
@@ -9,8 +8,7 @@ import './styles.css'
 
 
 function App() {
-  // const [allData, setAllData] = useState([]);
-  // const [filteredData, setFilteredData] = useState(allData);
+
 
   return (
     <HashRouter>
@@ -22,8 +20,14 @@ function App() {
           key={index}
           path={route.path}
           element={
-            <route.component />
-          }
+            route.protected ? (
+            <AuthChecker>
+              <route.component />
+            </AuthChecker>
+            ) : (
+              <route.component />
+            )  
+        }
           />
           )) }
         </Routes>
