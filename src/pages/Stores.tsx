@@ -1,10 +1,10 @@
 import DataTable from "../components/DataTable"
-// import Profile2 from "../assets/images/profile2.jpg"
+import Big from "../assets/images/Jehlyo-big.png"
 
 const Stores = () => {
   return (
     <div    
-    // style={{backgroundImage: `url(${ Profile2 })`}} 
+    style={{backgroundImage: `url(${ Big })`}} 
     className='hero mx-auto bg-cover'
     >
         <DataTable />
