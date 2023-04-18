@@ -1,6 +1,8 @@
 import {BrowserRouter, HashRouter, Router, Routes, Route, Link} from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 // import './App.css'
+import {Provider} from 'react-redux'
+import {store} from './redux/store'
 import routes from './config/routes';
 import Navbar from './components/Navbar';
 import './styles.css'
@@ -13,17 +15,19 @@ function App() {
   return (
     <HashRouter>
       <Navbar />
-      <Routes>
+      <Provider store={store}>
+        <Routes>
         {routes.map((route: any, index:any)=>(
           <Route
-            key={index}
-            path={route.path}
-            element={
-                <route.component />
-            }
-               />
-               )) }
-      </Routes>
+          key={index}
+          path={route.path}
+          element={
+            <route.component />
+          }
+          />
+          )) }
+        </Routes>
+      </Provider>
     </HashRouter>
         )
           }  

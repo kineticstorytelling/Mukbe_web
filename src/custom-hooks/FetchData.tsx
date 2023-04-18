@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-// import { server_calls } from "../api/server"
+import { server_calls } from "../api/server"
 
 export const useGetData = () => {
     const [ contactData, setData ] = useState<[]>([])
