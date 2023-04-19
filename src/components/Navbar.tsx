@@ -52,9 +52,9 @@ const Navbar = () => {
                     </Button>
                     <Button className="nav_item p-5 m-5 ">
                         <div>
-                            <Link to='/items' onClick={clicked} className='flex place-items-center  lg:inline-block lg:mt-0
+                            <Link to='/products' onClick={clicked} className='flex place-items-center  lg:inline-block lg:mt-0
                             text-black hover:text-yellow-800'>
-                                Items
+                                Products
                             </Link>
                         </div>
                     </Button>

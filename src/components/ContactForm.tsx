@@ -31,12 +31,19 @@ const ContactForm = (props:ContactFormProps) => {
         event.target.reset()
     } else {
         // use dispatch to update our state in our store
+       const newProduct = {
+        name: data.name,
+        cost: data.cost,
+        store: data.store
+
+        };
+
         dispatch(chooseName(data.name));
         // the data is coming from below in the return
         dispatch(chooseCost(data.cost));
         dispatch(chooseStore(data.store));
-    
-        server_calls.create(store.getState())
+       
+        server_calls.create(newProduct)
         // this will ping the store variable and get the info and create a new user with the info using the create function
         setTimeout(() => { window.location.reload(), 500});
     }

@@ -1,7 +1,7 @@
 import Home from "../pages/Home";
 // import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
-import Items from "../pages/Items";
+import Items from "../pages/Products";
 import Stores from "../pages/Stores";
 
 interface RouteType{

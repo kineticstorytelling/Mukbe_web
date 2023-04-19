@@ -4,7 +4,7 @@ import SearchFilter from '../components/SearchFilter'
 import UnitConverter from '../components/UnitConverter';
 import Big from '../assets/images/Jehlyo-big.png'
 
-const Items = () => {
+const Products = () => {
   return (
     <div className="min-h-screen bg-gray-100" style={{backgroundImage: `url(${ Big })`}}>
       <h1 className='text-blue-800 text-5xl text-center uppercase font-bold p-5'>Jehlyo Items</h1>
@@ -19,4 +19,4 @@ const Items = () => {
     )
 }
 
-export default Items
+export default Products

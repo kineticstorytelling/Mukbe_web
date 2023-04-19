@@ -1,5 +1,5 @@
 import DataTable from "../components/DataTable"
-import Big from "../assets/images/Jehlyo-big.png"
+import Big from "../assets/images/Jehlyo_bg.png"
 
 const Stores = () => {
   return (
