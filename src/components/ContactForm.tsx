@@ -45,7 +45,7 @@ const ContactForm = (props:ContactFormProps) => {
        
         server_calls.create(newProduct)
         // this will ping the store variable and get the info and create a new user with the info using the create function
-        setTimeout(() => { window.location.reload(), 500});
+        setTimeout(() => { window.location.reload()}, 500);
     }
   }
   
