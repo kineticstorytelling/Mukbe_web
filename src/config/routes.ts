@@ -1,7 +1,7 @@
 import Home from "../pages/Home";
 // import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
-import Items from "../pages/Products";
+import Products from "../pages/Products";
 import Stores from "../pages/Stores";
 
 interface RouteType{
@@ -31,9 +31,9 @@ const routes: RouteType[] = [
         protected: false
     },
     {
-        path: "/items",
-        component: Items,
-        name: "Items",
+        path: "/products",
+        component: Products,
+        name: "Products",
         protected: false
     }
 ]

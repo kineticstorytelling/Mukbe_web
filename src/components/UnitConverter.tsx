@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
+
+
 function UnitConverter() {
   const [inputValue, setInputValue] = useState("");
   const [selectedFromUnit, setSelectedFromUnit] = useState("lbs");
   const [selectedToUnit, setSelectedToUnit] = useState("g");
   const [outputValue, setOutputValue] = useState("");
-
+  const [inputPrice, setInputPrice] = useState("")
   const conversionRates = {
     oz: {
       lbs: 0.0625,
@@ -33,6 +35,9 @@ function UnitConverter() {
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+  const handleInputPrice = (event) => {
+    setInputPrice(event.target.value);
+  };
 
   const handleFromUnitChange = (event) => {
     setSelectedFromUnit(event.target.value);
@@ -44,12 +49,16 @@ function UnitConverter() {
 
   const handleConvert = () => {
     const rate = conversionRates[selectedFromUnit][selectedToUnit];
-    setOutputValue(inputValue * rate);
+    setOutputValue(inputPrice/(inputValue * rate));
   };
 
   return (
     <div className="p-3 px-5 border-solid border-2 rounded">
-      <h2 className="py-3 text-3xl text-blue-900">Convert Amount</h2>
+      <h2 className="py-3 text-3xl text-gray-800 drop-shadow-xl">Convert Amount</h2>
+      <label className="">
+        Cost: $ 
+        <input className='mx-2 px-1 py-1 w-1/6 rounded' type="number" value={inputPrice} onChange={handleInputPrice} />
+      </label>
       <label className="">
         Value:
         <input className='mx-2 px-1 py-1 w-1/6 rounded' type="number" value={inputValue} onChange={handleInputChange} />
@@ -75,7 +84,7 @@ function UnitConverter() {
         </select>
       </label>
       <br />
-      <button className='bg-blue-300 px-3 py-1 rounded my-4 text-yellow-100 border-solid border-2 hover:bg-blue-100 hover:text-blue-800 hover:border-blue-400' onClick={handleConvert}>Convert</button>
+      <button className='bg-gray-800 hover:bg-gray-200 px-3 py-1 rounded my-4 text-yellow-100 border-solid border-2  hover:text-black hover:border-white' onClick={handleConvert}>Convert</button>
       <br />
       <label className="">
         Result:

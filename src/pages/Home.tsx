@@ -5,7 +5,7 @@ function Home() {
   return (
     <div 
     style={{backgroundImage: `url(${ Background })`}} 
-    className='hero mx-auto my-auto bg-cover'
+    className='hero bg-cover'
     >
       <div className="mx-10 p-4 w-2/5 rounded bg-gray-300 bg-opacity-70">
           <h2 className="text-6xl font-semibold m-5 bg-gray-200 bg-opacity-10 max-w-xl">Jehlyo</h2>
