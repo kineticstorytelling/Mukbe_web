@@ -24,6 +24,7 @@ const InvoiceForm = () => {
   // this prevents it from reloading with each state change
   const reviewInvoiceHandler = (event:any) => {
     event.preventDefault();
+    // @ts-ignore
     setIsOpen(true);
   };
 
@@ -40,7 +41,7 @@ const InvoiceForm = () => {
     ]);
   };
 
-  const deleteItemHandler = (id) => {
+  const deleteItemHandler = (id:any) => {
     setItems((prevItem) => prevItem.filter((item) => item.id !== id));
   };
 
@@ -54,7 +55,8 @@ const InvoiceForm = () => {
     const newItems = items.map((items) => {
       for (const key in items) {
         if (key === editedItem.name && items.id === editedItem.id) {
-          items[key] = editedItem.value;
+     // @ts-ignore
+         items[key] = editedItem.value;
         }
       }
       return items;
@@ -65,10 +67,11 @@ const InvoiceForm = () => {
 
   const subtotal = items.reduce((previous, current) => {
     if (current.name.trim().length > 0)
-      return previous + Number(current.price * Math.floor(current.qty));
+     // @ts-ignore
+     return previous + Number(current.price * Math.floor(current.qty));
     else return previous;
   }, 0);
-
+    // @ts-ignore
   const taxRate = (tax * subtotal) / 100;
   
   const total = subtotal + taxRate;

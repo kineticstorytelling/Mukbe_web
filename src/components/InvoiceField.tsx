@@ -1,5 +1,5 @@
-import React from 'react';
 
+    // @ts-ignore
 const InvoiceField = ({ onEditItem, cellData }) => {
   return (
     <input

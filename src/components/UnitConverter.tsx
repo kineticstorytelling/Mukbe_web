@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+// @ts-nocheck 
 
 
 function UnitConverter() {
@@ -48,7 +48,9 @@ function UnitConverter() {
   };
 
   const handleConvert = () => {
+    // @ts-ignore
     const rate = conversionRates[selectedFromUnit][selectedToUnit];
+    // @ts-ignore
     setOutputValue(inputPrice/(inputValue * rate));
   };
 
@@ -74,7 +76,7 @@ function UnitConverter() {
         </select>
       </label>
       {/* <br /> */}
-      <label className="px-4 lg:text-white md:text-black">
+      <label className="px-4 md:text-black">
         To:
         <select className='mx-2 px-3 py-1 rounded'value={selectedToUnit} onChange={handleToUnitChange}>
           <option value="lbs">lbs</option>

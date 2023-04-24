@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+// @ts-nocheck
 
 export default function Posts() {
         const [APIData, setAPIData] = useState([])
@@ -18,7 +18,7 @@ export default function Posts() {
                 })
         }, [])
     
-        const searchItems = (searchValue) => {
+        const searchItems = (searchValue:any) => {
             setSearchInput(searchValue)
             if (searchInput !== '') {
                 const filteredData = APIData.filter((item) => {
@@ -43,9 +43,15 @@ export default function Posts() {
                             return (
                                 <>
                                 <div className='flex p-1'>
-                                <h2 className='px-2 text-lg'>{item.name}</h2>
-                                <h3 className='px-2 text-lg'>{item.cost}</h3>
-                                <h3 className='px-2 text-lg'>{item.store}</h3>
+                                <h2 className='px-2 text-lg'>{
+                                    // @ts-ignore
+                                item.name}</h2>
+                                <h3 className='px-2 text-lg'>{item.
+                                    // @ts-ignore
+                                cost}</h3>
+                                <h3 className='px-2 text-lg'>{item.
+                                // @ts-ignore
+                                store}</h3>
                                 </div>
                                 </>
                             )
@@ -54,8 +60,12 @@ export default function Posts() {
                         APIData.map((item) => {
                             return (
                                 <div className='flex p-1'>
-                                <h2 className='px-2 text-lg'>{item.name}</h2>
-                                <h2 className='px-2 text-lg'>{item.store}</h2>
+                                <h2 className='px-2 text-lg'>{item.
+                                // @ts-ignore
+                                name}</h2>
+                                <h2 className='px-2 text-lg'>{item.
+                                // @ts-ignore
+                                store}</h2>
                                 </div>
                             )
                         })

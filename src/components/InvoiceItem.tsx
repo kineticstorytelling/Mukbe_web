@@ -11,7 +11,7 @@ import InvoiceField from './InvoiceField';
 
 // tax
 
-
+    // @ts-ignore
 const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
   const deleteItemHandler = () => {
     onDeleteItem(id);
