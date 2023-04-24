@@ -131,7 +131,7 @@ const InvoiceForm = () => {
           </tbody>
         </table>
         <button
-          className="rounded-md bg-blue-800 px-4 py-2 text-sm text-white shadow-sm hover:bg-blue-300"
+          className="rounded-md bg-gray-800 hover:bg-gray-500 px-4 py-2 text-sm text-white shadow-sm "
           type="button"
           onClick={addItemHandler}
         >

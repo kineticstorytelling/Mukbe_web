@@ -32,18 +32,18 @@ function UnitConverter() {
     },
   };
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event:any) => {
     setInputValue(event.target.value);
   };
-  const handleInputPrice = (event) => {
+  const handleInputPrice = (event:any) => {
     setInputPrice(event.target.value);
   };
 
-  const handleFromUnitChange = (event) => {
+  const handleFromUnitChange = (event:any) => {
     setSelectedFromUnit(event.target.value);
   };
 
-  const handleToUnitChange = (event) => {
+  const handleToUnitChange = (event:any) => {
     setSelectedToUnit(event.target.value);
   };
 
@@ -54,7 +54,7 @@ function UnitConverter() {
 
   return (
     <div className="p-3 px-5 border-solid border-2 rounded">
-      <h2 className="py-3 text-3xl text-gray-800 drop-shadow-xl">Convert Amount</h2>
+      <h2 className="py-3 text-3xl text-gray-800 drop-shadow-xl font-semibold">Convert Amount</h2>
       <label className="">
         Cost: $ 
         <input className='mx-2 px-1 py-1 w-1/6 rounded' type="number" value={inputPrice} onChange={handleInputPrice} />
@@ -63,7 +63,7 @@ function UnitConverter() {
         Value:
         <input className='mx-2 px-1 py-1 w-1/6 rounded' type="number" value={inputValue} onChange={handleInputChange} />
       </label>
-      {/* <br /> */}
+   
       <label className="px-4">
         From:
         <select className='mx-2 px-3 py-1 rounded' value={selectedFromUnit} onChange={handleFromUnitChange}>
@@ -74,7 +74,7 @@ function UnitConverter() {
         </select>
       </label>
       {/* <br /> */}
-      <label className="px-4">
+      <label className="px-4 lg:text-white md:text-black">
         To:
         <select className='mx-2 px-3 py-1 rounded'value={selectedToUnit} onChange={handleToUnitChange}>
           <option value="lbs">lbs</option>
@@ -88,7 +88,7 @@ function UnitConverter() {
       <br />
       <label className="">
         Result:
-        <input className='mx-3 py-1 px-1 w-1/4 rounded' type="number" value={outputValue} readOnly />
+        <input className='mx-3 py-1 px-1 w-1/4 rounded' type="number" value={outputValue} readOnly /> Cost per Unit
       </label>
     </div>
   );
