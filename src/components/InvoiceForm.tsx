@@ -22,25 +22,10 @@ const InvoiceForm = () => {
   ]);
 
   // this prevents it from reloading with each state change
-  const reviewInvoiceHandler = (event) => {
+  const reviewInvoiceHandler = (event:any) => {
     event.preventDefault();
     setIsOpen(true);
   };
-
-  // const addNextInvoiceHandler = () => {
-  //   // this increments the invoice
-  //   setInvoiceNumber((prevNumber) => incrementString(prevNumber));
-  //   // this sets the items 
-  //   setItems([
-  //     {
-  //       id: uid(6),
-  //       name: '',
-  //       qty: 1,
-  //       price: '1.00',
-  //     },
-  //   ]);
-  // };
-
 
   const addItemHandler = () => {
     const id = uid(6);
@@ -59,7 +44,7 @@ const InvoiceForm = () => {
     setItems((prevItem) => prevItem.filter((item) => item.id !== id));
   };
 
-  const edtiItemHandler = (event) => {
+  const edtiItemHandler = (event:any) => {
     const editedItem = {
       id: event.target.id,
       name: event.target.name,

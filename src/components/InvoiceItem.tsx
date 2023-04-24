@@ -11,6 +11,7 @@ import InvoiceField from './InvoiceField';
 
 // tax
 
+
 const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
   const deleteItemHandler = () => {
     onDeleteItem(id);
@@ -20,7 +21,7 @@ const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
     <tr>
       <td className="w-full">
         <InvoiceField
-          onEditItem={(event) => onEdtiItem(event)}
+          onEditItem={(event:any) => onEdtiItem(event)}
           cellData={{
             placeholder: 'Item name',
             type: 'text',
@@ -32,7 +33,7 @@ const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
       </td>
       <td className="min-w-[65px] md:min-w-[80px] ">
         <InvoiceField
-          onEditItem={(event) => onEdtiItem(event)}
+          onEditItem={(event:any) => onEdtiItem(event)}
           cellData={{
             type: 'number',
             min: '1',
@@ -58,7 +59,7 @@ const InvoiceItem = ({ id, name, qty, price, onDeleteItem, onEdtiItem }) => {
           />
         </svg>
         <InvoiceField
-          onEditItem={(event) => onEdtiItem(event)}
+          onEditItem={(event:any) => onEdtiItem(event)}
           cellData={{
             className: 'text-right',
             type: 'number',
