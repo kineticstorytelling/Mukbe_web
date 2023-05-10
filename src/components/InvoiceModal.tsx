@@ -1,7 +1,12 @@
 import React, { Fragment } from 'react';
-// import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 import { toPng } from 'html-to-image';
 import { jsPDF } from 'jspdf';
+
+interface InvoiceModalProps{
+  id?:string;
+
+}
 
 const InvoiceModal = ({
   isOpen,
