@@ -191,7 +191,7 @@ const InvoiceModal = ({
               <div className="mt-4 flex space-x-2 px-4 pb-6">
                 <button
                   className="flex w-full items-center justify-center space-x-1 rounded-md border border-blue-500 py-2 text-sm text-blue-500 shadow-sm hover:bg-blue-500 hover:text-white"
-                  // onClick={SaveAsPDFHandler}
+                  onClick={SaveAsPDFHandler}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
