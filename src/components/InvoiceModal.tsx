@@ -64,7 +64,7 @@ const InvoiceModal = ({
               pageCanvas.height = pxFullHeight % pxPageHeight;
               pageHeight = (pageCanvas.height * pdfWidth) / pageCanvas.width;
             }
-            // Display the page.
+            // Display the page and adds a change.
             const w = pageCanvas.width;
             const h = pageCanvas.height;
             pageCtx.fillStyle = 'white';
