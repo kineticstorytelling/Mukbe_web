@@ -10,7 +10,7 @@ const today = date.toLocaleDateString('en-US', {
 });
 
 const InvoiceForm = () => {
-      // const [isOpen, setIsOpen] = useState(false);
+      const [isOpen, setIsOpen] = useState(false);
       const [tax, setTax] = useState('');
       const [storeName, setStoreName] = useState('');
       const [items, setItems] = useState([
@@ -202,7 +202,6 @@ const InvoiceForm = () => {
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             invoiceInfo={{
-              invoiceNumber,
               storeName,
               subtotal,
               taxRate,
@@ -210,7 +209,7 @@ const InvoiceForm = () => {
               
             }}
             items={items}
-            onAddNextInvoice={addNextInvoiceHandler}
+            // onAddNextInvoice={addNextInvoiceHandler}
           />
           <div className="space-y-4 py-2">
             <div className="space-y-2">

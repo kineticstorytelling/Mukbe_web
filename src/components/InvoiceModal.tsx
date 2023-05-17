@@ -13,16 +13,16 @@ const InvoiceModal = ({
   setIsOpen,
   invoiceInfo,
   items,
-  onAddNextInvoice,
+  // onAddNextInvoice,
 }) => {
   function closeModal() {
     setIsOpen(false);
   }
 
-  const addNextInvoiceHandler = () => {
-    setIsOpen(false);
-    onAddNextInvoice();
-  };
+  // const addNextInvoiceHandler = () => {
+  //   setIsOpen(false);
+  //   onAddNextInvoice();
+  // };
 
   const SaveAsPDFHandler = () => {
     const dom = document.getElementById('print');
@@ -168,10 +168,10 @@ const InvoiceModal = ({
                       <span className="font-bold">Subtotal:</span>
                       <span>${invoiceInfo.subtotal.toFixed(2)}</span>
                     </div>
-                    <div className="flex w-full justify-between">
+                    {/* <div className="flex w-full justify-between">
                       <span className="font-bold">Discount:</span>
                       <span>${invoiceInfo.discountRate.toFixed(2)}</span>
-                    </div>
+                    </div> */}
                     <div className="flex w-full justify-between">
                       <span className="font-bold">Tax:</span>
                       <span>${invoiceInfo.taxRate.toFixed(2)}</span>
@@ -209,11 +209,11 @@ const InvoiceModal = ({
                   </svg>
                   <span>Download</span>
                 </button>
-                <button
-                  onClick={addNextInvoiceHandler}
-                  className="flex w-full items-center justify-center space-x-1 rounded-md bg-blue-500 py-2 text-sm text-white shadow-sm hover:bg-blue-600"
-                >
-                  <svg
+                {/* <button */}
+                  {/* // onClick={addNextInvoiceHandler} */}
+                {/* //   className="flex w-full items-center justify-center space-x-1 rounded-md bg-blue-500 py-2 text-sm text-white shadow-sm hover:bg-blue-600" */}
+                {/* // > */}
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
                     fill="none"
@@ -228,7 +228,7 @@ const InvoiceModal = ({
                     />
                   </svg>
                   <span>Next</span>
-                </button>
+                </button> */}
               </div>
             </div>
            </Transition.Child>
