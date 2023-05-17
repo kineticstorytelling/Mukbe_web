@@ -234,30 +234,7 @@ const InvoiceForm = () => {
                 </span>
               </div>
             </div>
-            <div className="space-y-2">
-              <label
-                className="text-sm font-bold md:text-base"
-                htmlFor="discount"
-              >
-                Discount rate:
-              </label>
-              <div className="flex items-center">
-                <input
-                  className="w-full rounded-r-none bg-white shadow-sm"
-                  type="number"
-                  name="discount"
-                  id="discount"
-                  min="0"
-                  step="0.01"
-                  placeholder="0.0"
-                  value={discount}
-                  onChange={(event) => setDiscount(event.target.value)}
-                />
-                <span className="rounded-r-md bg-gray-200 py-2 px-4 text-gray-500 shadow-sm">
-                  %
-                </span>
-              </div>
-            </div>
+            
           </div>
           </div>
         </div>
