@@ -21,7 +21,7 @@ const Navbar = () => {
     }
   const signOutOnClick = () => {
         signOut(auth)
-        // nothing happens after so we do this:
+        // This is meant to reload 
         location.reload();
     }
 
