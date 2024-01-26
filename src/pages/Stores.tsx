@@ -1,7 +1,7 @@
 import DataTable from "../components/DataTable"
 import Big from "../assets/images/Jehlyo_bg.png"
 
-const Stores = () => {
+const Products = () => {
   return (
     <div    
     style={{backgroundImage: `url(${ Big })`}} 
@@ -12,4 +12,4 @@ const Stores = () => {
   )
 }
 
-export default Stores
+export default Products
