@@ -8,7 +8,7 @@ function Home() {
     className='hero bg-cover'
     >
       <div className="mx-10 p-4 w-2/5 rounded bg-gray-300 bg-opacity-70">
-          <h2 className="text-6xl font-semibold m-5 bg-gray-200 bg-opacity-10 max-w-xl">Jehlyo</h2>
+          <h2 className="text-6xl font-semibold m-5 bg-gray-200 bg-opacity-10 max-w-xl">Mukbe</h2>
           <br />
           <h2 className="text 5x1 text-gray-800 bg-gray-200 bg-opacity-10 m-5 max-w-xl">Find the best prices for ingredients at the stores. Never struggle to remember which stores have the most affordable items again.</h2>
           <h3 className="text 5x1 text-gray-800 bg-gray-200 bg-opacity-10 font-semibold mx-5 max-w-xl">What would you like to do?</h3>
