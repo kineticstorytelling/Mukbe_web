@@ -51,15 +51,15 @@ function UnitConverter() {
     // @ts-ignore
     const rate = conversionRates[selectedFromUnit][selectedToUnit];
     // @ts-ignore
-    setOutputValue(inputPrice/(inputValue * rate));
+    setOutputValue((inputPrice/(inputValue * rate)).toFixed(2));
   };
 
   return (
-    <div className="p-3 px-5 border-solid border-2 rounded">
-      <h2 className="py-3 text-3xl text-gray-800 drop-shadow-xl font-semibold">Convert Amount</h2>
+    <div className="p-3 px-5 border-solid border-2 rounded bg-yellow-900 opacity-70">
+      <h2 className="py-3 text-3xl text-white drop-shadow-xl font-semibold">Convert Amount</h2>
       <label className="">
         Cost: $ 
-        <input className='mx-2 px-1 py-1 w-1/6 rounded' type="number" value={inputPrice} onChange={handleInputPrice} />
+        <input className='mx-2 px-2 py-1 w-1/6 rounded' type="number" value={inputPrice} onChange={handleInputPrice} />
       </label>
       <label className="">
         Value:
