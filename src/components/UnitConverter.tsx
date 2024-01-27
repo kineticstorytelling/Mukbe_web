@@ -59,16 +59,16 @@ function UnitConverter() {
       <h2 className="py-3 text-3xl text-white drop-shadow-xl font-semibold">Convert Amount</h2>
       <label className="text-white">
         Cost: $ 
-        <input className='mx-2 px-2 py-1 w-1/6 rounded' type="number" value={inputPrice} onChange={handleInputPrice} />
+        <input className='mx-2 px-2 py-1 w-1/6 rounded text-black' type="number" value={inputPrice} onChange={handleInputPrice} />
       </label>
       <label className="text-white">
         Value:
-        <input className='mx-2 px-1 py-1 w-1/6 rounded' type="number" value={inputValue} onChange={handleInputChange} />
+        <input className='mx-2 px-1 py-1 w-1/6 rounded text-black' type="number" value={inputValue} onChange={handleInputChange} />
       </label>
    
       <label className="px-4 text-white">
         From:
-        <select className='mx-2 px-3 py-1 rounded' value={selectedFromUnit} onChange={handleFromUnitChange}>
+        <select className='mx-2 px-3 py-1 rounded text-black' value={selectedFromUnit} onChange={handleFromUnitChange}>
           <option value="lbs">lbs</option>
           <option value="oz">oz</option>
           <option value="g">g</option>
@@ -76,9 +76,9 @@ function UnitConverter() {
         </select>
       </label>
       {/* <br /> */}
-      <label className="px-4 md:text-black">
+      <label className="px-4 md:text-white">
         To:
-        <select className='mx-2 px-3 py-1 rounded'value={selectedToUnit} onChange={handleToUnitChange}>
+        <select className='mx-2 px-3 py-1 rounded text-black'value={selectedToUnit} onChange={handleToUnitChange}>
           <option value="lbs">lbs</option>
           <option value="oz">oz</option>
           <option value="g">g</option>
@@ -88,9 +88,9 @@ function UnitConverter() {
       <br />
       <button className='bg-gray-800 hover:bg-gray-200 px-3 py-1 rounded my-4 text-yellow-100 border-solid border-2  hover:text-black hover:border-white' onClick={handleConvert}>Convert</button>
       <br />
-      <label className="">
+      <label className="text-white">
         Result:
-        <input className='mx-3 py-1 px-1 w-1/4 rounded' type="number" value={outputValue} readOnly /> Cost per Unit
+        <input className='mx-3 py-1 px-1 w-1/4 rounded text-black' type="number" value={outputValue} readOnly /> Cost per Unit
       </label>
     </div>
   );
