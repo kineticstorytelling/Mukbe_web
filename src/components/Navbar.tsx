@@ -46,7 +46,7 @@ const Navbar = () => {
                         <div>
                             <Link to='/stores' onClick={clicked} className='flex place-items-center  lg:inline-block lg:mt-0
                             text-black hover:text-yellow-800'>
-                                Stores
+                                Products
                             </Link>
                         </div>
                     </Button>
