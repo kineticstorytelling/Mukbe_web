@@ -57,7 +57,7 @@ function UnitConverter() {
   return (
     <div className="p-3 px-5 border-solid border-2 rounded bg-yellow-900 opacity-70">
       <h2 className="py-3 text-3xl text-white drop-shadow-xl font-semibold">Convert Amount</h2>
-      <label className="">
+      <label className="text-white">
         Cost: $ 
         <input className='mx-2 px-2 py-1 w-1/6 rounded' type="number" value={inputPrice} onChange={handleInputPrice} />
       </label>
