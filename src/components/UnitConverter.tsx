@@ -61,12 +61,12 @@ function UnitConverter() {
         Cost: $ 
         <input className='mx-2 px-2 py-1 w-1/6 rounded' type="number" value={inputPrice} onChange={handleInputPrice} />
       </label>
-      <label className="">
+      <label className="text-white">
         Value:
         <input className='mx-2 px-1 py-1 w-1/6 rounded' type="number" value={inputValue} onChange={handleInputChange} />
       </label>
    
-      <label className="px-4">
+      <label className="px-4 text-white">
         From:
         <select className='mx-2 px-3 py-1 rounded' value={selectedFromUnit} onChange={handleFromUnitChange}>
           <option value="lbs">lbs</option>
