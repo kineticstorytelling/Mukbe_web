@@ -1,8 +1,8 @@
 import Home from "../pages/Home";
 // import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
-import Products from "../pages/Products";
-import Stores from "../pages/Stores";
+import Products from "../pages/Expenses";
+import Stores from "../pages/Products";
 
 interface RouteType{
     path: string,
