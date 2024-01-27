@@ -1,8 +1,8 @@
 import Home from "../pages/Home";
 // import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
-import Products from "../pages/Expenses";
-import Stores from "../pages/Products";
+import Products from "../pages/Products";
+import Expenses from "../pages/Expenses";
 
 interface RouteType{
     path: string,
@@ -25,15 +25,15 @@ const routes: RouteType[] = [
         protected: false
     },
     {
-        path: "/stores",
-        component: Stores,
-        name: "Stores",
-        protected: false
-    },
-    {
         path: "/products",
         component: Products,
         name: "Products",
+        protected: false
+    },
+    {
+        path: "/expenses",
+        component: Expenses,
+        name: "Expenses",
         protected: false
     }
 ]
