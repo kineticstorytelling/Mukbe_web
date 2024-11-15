@@ -1,7 +1,7 @@
 <h1>Welcome to Mukbe</h1>
 
 <h3>Link to Live Web Application:</h3>
-<a href="https://jehlyo.netlify.app/">Visit W3Schools</a> 
+<a href="https://jehlyo.netlify.app/">Jehlyo Web Application</a> 
 
 A price comparison app used to compare prices of products sold in different grocery stores
 
