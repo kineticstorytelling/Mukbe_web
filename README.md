@@ -2,7 +2,7 @@
 
 <h3>Link to Live Web Application:</h3>
 <a href="https://jehlyo.netlify.app/">Jehlyo Web Application</a>
-<img title="jehlyo hero" alt="Image of Jehlyo hero page">   
+<img title="jehlyo hero" alt="Image of Jehlyo hero page" />
 
 A price comparison app used to compare prices of products sold in different grocery stores
 
