@@ -1,6 +1,7 @@
 <h1>Welcome to Mukbe</h1>
 
-<h2>Link to Live Web Application</h2>
+<h2>Link to Live Web Application:</h2>
+<a href="https://www.w3schools.com">Visit W3Schools</a> 
 
 A price comparison app used to compare prices of products sold in different grocery stores
 
