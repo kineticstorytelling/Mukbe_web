@@ -1,4 +1,4 @@
-<h1>Welcome to Jehlyo/Mukbe</h1>
+# Welcome to Jehlyo/Mukbe
 <img title="jehlyo hero" alt="Image of Jehlyo hero page" src="/src/assets/images/Jehlyo Landing.png">
 
 ### Link to Live Web Application: <a href="https://jehlyo.netlify.app/">Jehlyo Web Application</a>
