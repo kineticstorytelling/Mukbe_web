@@ -1,7 +1,7 @@
 <h1>Welcome to Jehlyo/Mukbe</h1>
 <img title="jehlyo hero" alt="Image of Jehlyo hero page" src="/src/assets/images/Jehlyo Landing.png">
 
-<h3>Link to Live Web Application: <a href="https://jehlyo.netlify.app/">Jehlyo Web Application</a></h3>
+### Link to Live Web Application: <a href="https://jehlyo.netlify.app/">Jehlyo Web Application</a>
 </br>
 A price comparison app used to compare prices of products sold in different grocery stores
 
