@@ -3,7 +3,7 @@
 
 <h3>Link to Live Web Application:</h3>
 <a href="https://jehlyo.netlify.app/">Jehlyo Web Application</a>
-<br>
+<br/>
 A price comparison app used to compare prices of products sold in different grocery stores
 
 Have you ever been discouraged to find the same bag of apples costs different depending on which store you go to?
