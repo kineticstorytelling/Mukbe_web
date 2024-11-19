@@ -13,5 +13,5 @@ Well now you can with Mukbe the price app!
 ## Application Layout
 
 The Jehlyo Application is mainly two pages: the **Stores** page and the **Products** page.
-One is for the products listed
+The **Stores** is for the products listed
 
