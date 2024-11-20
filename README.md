@@ -15,4 +15,5 @@ Well now you can with Mukbe the price app!
 The Jehlyo Application is mainly two pages: the **Stores** page and the **Products** page.
 </br>
 The **Stores** page is for the products listed in the database.
+Each product 
 
