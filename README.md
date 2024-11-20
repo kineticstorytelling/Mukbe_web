@@ -15,5 +15,5 @@ Well now you can with Mukbe the price app!
 The Jehlyo Application is mainly two pages: the **Stores** page and the **Products** page.
 </br>
 The **Stores** page is for the products listed in the database.
-Each product is manually entered into the fields which are in turn, received by the API and passed
+Each product is manually entered into the fields which are in turn, received by the API and passed into the SQL database
 
